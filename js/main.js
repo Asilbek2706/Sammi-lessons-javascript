@@ -1,4 +1,67 @@
 /**
+// Massivlar
+
+const colors = ['red', 'blue', 'black', 'yellow', 'green']
+
+console.log('Massiv uzunligi:', colors.length)
+console.log('Index yordamida elemnt olish:', colors[2])
+console.log("Oxirigi elementi o'chirish:", colors.pop())
+console.log("Oxirigi yangi element qo'shish", colors.push('brown'))
+console.log("Oldidagi elementi o'chirish:", colors.shift())
+console.log("Oldiga yangi element qo'shish", colors.unshift('gray'))
+
+// Pop va Push
+// Pop - bu massivni oxiridagi elementi o'chiradi
+// Push - bu massivni oxiriga yangi element qo'shadi
+
+// Shif va Unshift
+// Pop - bu massivni oldidagi elementi o'chiradi
+// Push - bu massivni oldiga yangi element qo'shadi
+
+console.log(colors)
+
+const cars = ['BMW', 'Merc', 'Audi', 'Suzuki', 'Subaru']
+// Sort method
+cars.sort()
+console.log(cars)
+
+const n = [23, 34, 7, 12, 74, 5]
+n.sort(compareNum)
+function compareNum(a, b) {
+  return a - b
+}
+console.log(n)
+
+// Itteratsiya
+
+// for (let i = 0; i < cars.length; i++) {
+// 	console.log(cars[i])
+// }
+
+// for (let car of cars) {
+// 	console.log(car)
+// }
+
+// colors.forEach((item, index, arr) => {
+// 	console.log(`${index}: ${item} in array ${arr}`)
+// })
+
+const numbers = [1, 2, 3, 4, 5]
+numbers[99] = 100
+console.log(numbers.length)
+console.log(numbers)
+
+// Split
+
+const socialMedia = 'Youtube, Telegram, Instagram'
+const arr = socialMedia.split(', ')
+const text = arr.join('-')
+console.log(arr)
+console.log(text)*/
+
+
+
+/**
  * // String methods
 
 let text = 'Hello World';
