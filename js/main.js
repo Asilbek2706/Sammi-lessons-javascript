@@ -1,3 +1,16 @@
+const suvCars = {
+  weight: 1000,
+  length: 3,
+}
+
+const nexia = {
+  weight: 800,
+}
+
+// nexia.__proto__ = suvCars
+Object.setPrototypeOf(nexia, suvCars)
+console.log(nexia.length)
+
 /** // Primitive nushalash
 let a = 10,
     b = a
