@@ -1,3 +1,99 @@
+/** // Primitive nushalash
+let a = 10,
+    b = a
+
+b = b + 10
+
+console.log(a)
+console.log(b)
+
+// Object
+// Yuzaki clonlash
+// Chuqur clonlash
+const person = {
+  name: 'Samar',
+  age: 22,
+  hobbies: {
+    games: 'UFC',
+    sport: 'Football',
+  },
+}
+
+// const secondPerson = person // Havola - reference
+
+// secondPerson.name = 'Yusuf'
+// secondPerson.age = 21
+
+// console.log(person)
+// console.log(secondPerson)
+
+// #1. Intteratsiya
+// const copyObj = obj => {
+// 	const clone = {}
+
+// 	for (let key in obj) {
+// 		clone[key] = obj[key]
+// 	}
+
+// 	return clone
+// }
+
+// const secondPerson = copyObj(person)
+
+// secondPerson.name = 'Yusuf'
+// secondPerson.age = 21
+// secondPerson.hobbies.games = 'Blur'
+
+// console.log(person)
+// console.log(secondPerson)
+
+// #2. Object assign
+// const secondPerson = Object.assign({ isMarried: false }, person)
+
+// secondPerson.name = 'Yusuf'
+// secondPerson.age = 21
+
+// console.log(person)
+// console.log(secondPerson)
+
+// #3. Spread operator ES8
+// const secondPerson = { ...person }
+
+// secondPerson.name = 'Yusuf'
+// secondPerson.age = 21
+
+// console.log(person)
+// console.log(secondPerson)
+
+// Array clonlash
+// #1. Slice method yordamida
+// const cars = ['BMW', 'Audi', 'Hyundai']
+// const clone = cars.slice()
+// clone.push('Suzuki')
+
+// console.log(cars)
+// console.log(clone)
+
+// #2. Spread operator ES8
+// const copy = [...cars]
+// copy.push('Subaru')
+
+// console.log(cars)
+// console.log(copy)
+
+// Function - Spread
+
+function log(a, b, c) {
+  console.log('First arg: ', a)
+  console.log('Second arg: ', b)
+  console.log('Thirds arg: ', c)
+}
+
+const arr = [4, 5, 6]
+
+log(...arr)
+ */
+
 /**
 // Massivlar
 
@@ -58,8 +154,6 @@ const arr = socialMedia.split(', ')
 const text = arr.join('-')
 console.log(arr)
 console.log(text)*/
-
-
 
 /**
  * // String methods
