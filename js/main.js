@@ -1,273 +1,40 @@
-const suvCars = {
-  weight: 1000,
-  length: 3,
-}
+const btns = document.querySelectorAll('button'),
+	wrapper = document.querySelector('.wrapper')
 
-const nexia = {
-  weight: 800,
-}
+btns.forEach(item => {
+	item.addEventListener('click', () => {
+		console.log('CLICKED')
+	})
+})
 
-// nexia.__proto__ = suvCars
-Object.setPrototypeOf(nexia, suvCars)
-console.log(nexia.length)
+wrapper.addEventListener('click', event => {
+	if (event.target && event.target.matches('button.blue')) {
+		console.log('CLICK')
+	}
+})
 
-/** // Primitive nushalash
-let a = 10,
-    b = a
+const button = document.createElement('button')
+button.classList.add('blue')
+button.textContent = 6
+wrapper.append(button)
 
-b = b + 10
+// console.log(btns[0].classList.value)
+// console.log(btns[0].classList.item(0))
+// console.log(btns[0].classList.add('yellow'))
+// console.log(btns[0].classList.remove('blue'))
+// console.log(btns[0].classList.toggle('blue'))
+// console.log(btns[0].classList.toggle('blue'))
 
-console.log(a)
-console.log(b)
-
-// Object
-// Yuzaki clonlash
-// Chuqur clonlash
-const person = {
-  name: 'Samar',
-  age: 22,
-  hobbies: {
-    games: 'UFC',
-    sport: 'Football',
-  },
-}
-
-// const secondPerson = person // Havola - reference
-
-// secondPerson.name = 'Yusuf'
-// secondPerson.age = 21
-
-// console.log(person)
-// console.log(secondPerson)
-
-// #1. Intteratsiya
-// const copyObj = obj => {
-// 	const clone = {}
-
-// 	for (let key in obj) {
-// 		clone[key] = obj[key]
-// 	}
-
-// 	return clone
+// if (btns[1].classList.contains('red')) {
+// 	console.log('Element contain red class')
 // }
 
-// const secondPerson = copyObj(person)
-
-// secondPerson.name = 'Yusuf'
-// secondPerson.age = 21
-// secondPerson.hobbies.games = 'Blur'
-
-// console.log(person)
-// console.log(secondPerson)
-
-// #2. Object assign
-// const secondPerson = Object.assign({ isMarried: false }, person)
-
-// secondPerson.name = 'Yusuf'
-// secondPerson.age = 21
-
-// console.log(person)
-// console.log(secondPerson)
-
-// #3. Spread operator ES8
-// const secondPerson = { ...person }
-
-// secondPerson.name = 'Yusuf'
-// secondPerson.age = 21
-
-// console.log(person)
-// console.log(secondPerson)
-
-// Array clonlash
-// #1. Slice method yordamida
-// const cars = ['BMW', 'Audi', 'Hyundai']
-// const clone = cars.slice()
-// clone.push('Suzuki')
-
-// console.log(cars)
-// console.log(clone)
-
-// #2. Spread operator ES8
-// const copy = [...cars]
-// copy.push('Subaru')
-
-// console.log(cars)
-// console.log(copy)
-
-// Function - Spread
-
-function log(a, b, c) {
-  console.log('First arg: ', a)
-  console.log('Second arg: ', b)
-  console.log('Thirds arg: ', c)
-}
-
-const arr = [4, 5, 6]
-
-log(...arr)
- */
-
-/**
-// Massivlar
-
-const colors = ['red', 'blue', 'black', 'yellow', 'green']
-
-console.log('Massiv uzunligi:', colors.length)
-console.log('Index yordamida elemnt olish:', colors[2])
-console.log("Oxirigi elementi o'chirish:", colors.pop())
-console.log("Oxirigi yangi element qo'shish", colors.push('brown'))
-console.log("Oldidagi elementi o'chirish:", colors.shift())
-console.log("Oldiga yangi element qo'shish", colors.unshift('gray'))
-
-// Pop va Push
-// Pop - bu massivni oxiridagi elementi o'chiradi
-// Push - bu massivni oxiriga yangi element qo'shadi
-
-// Shif va Unshift
-// Pop - bu massivni oldidagi elementi o'chiradi
-// Push - bu massivni oldiga yangi element qo'shadi
-
-console.log(colors)
-
-const cars = ['BMW', 'Merc', 'Audi', 'Suzuki', 'Subaru']
-// Sort method
-cars.sort()
-console.log(cars)
-
-const n = [23, 34, 7, 12, 74, 5]
-n.sort(compareNum)
-function compareNum(a, b) {
-  return a - b
-}
-console.log(n)
-
-// Itteratsiya
-
-// for (let i = 0; i < cars.length; i++) {
-// 	console.log(cars[i])
+// btns[0].addEventListener('click', () => {
+// if (btns[0].classList.contains('red')) {
+// 	btns[0].classList.remove('red')
+// } else {
+// 	btns[0].classList.add('red')
 // }
 
-// for (let car of cars) {
-// 	console.log(car)
-// }
-
-// colors.forEach((item, index, arr) => {
-// 	console.log(`${index}: ${item} in array ${arr}`)
+// 	btns[1].classList.toggle('red')
 // })
-
-const numbers = [1, 2, 3, 4, 5]
-numbers[99] = 100
-console.log(numbers.length)
-console.log(numbers)
-
-// Split
-
-const socialMedia = 'Youtube, Telegram, Instagram'
-const arr = socialMedia.split(', ')
-const text = arr.join('-')
-console.log(arr)
-console.log(text)*/
-
-/**
- * // String methods
-
-let text = 'Hello World';
-const password = '        dawdwa         ';
-
-// Lenght is property
-console.log('Uzunligi:', text.length);
-
-// Methods
-console.log('#1. Aniq positsiyadagi indexdagi xarf:', text.charAt(2));
-console.log('#2. Aniq positsiyadagi indexdagi xarf:', text[1]);
-console.log('Xarflarni kotta registerda qilish:', text.toUpperCase());
-console.log('Xarflarni kichik registerda qilish:', text.toLowerCase());
-console.log('#1. Matni bosh va oxiridan kesish:', text.slice(0, -4));
-console.log('#2. Matni bosh va oxiridan kesish:', text.substring(0, 2));
-console.log("Ikki tarafdan bo'sh space olib tashlash", password.trim());
-console.log('Boshidan space olib tashlash', password.trimStart());
-console.log('Oxiridan space olib tashlash', password.trimEnd());
-
-// console.log(text);*/
-
-/**
-// // Number methods
-
-const number = 12.6;
-const width = '240.42px';
-
-console.log('Eng yaqin sonni oladi:', Math.round(number));
-console.log('Sonnu butun qilib beradi:', Math.floor(number));
-console.log(
-  "String ma'lumot turidan butun sonni qaytarib beradi:",
-  parseInt(width)
-);
-console.log("String ma'lumot turidan son qilib beradi", parseFloat(width));
-
-console.log(number);*/
-
-/** Callback - bitta funksiya ishga tushgandan kn oshla tushadigan funksiya
-
-const firstLog = () => {
-  setTimeout(function () {
-    console.log(1);
-  }, 1000);
-};
-
-const secondLog = () => {
-  console.log(2);
-};
-
-firstLog();
-secondLog();*/
-
-/**function greeting(callback) {
-
-  console.log('Salom');
-  callback();
-}
-
-// function callback() {
-//   console.log('Dunyo');
-// }
-
-// greeting(callback);
-
-greeting(() => console.log('Dunyo')); */
-
-/**const person = {
-  name: 'Asilbek',
-  year: 2006,
-  job: 'Developer',
-  hobbies: {
-    sport: 'Football',
-    games: 'UFC',
-  },
-  sayHello: function () {
-    console.log('Salom, mening ismim ' + this.name);
-  },
-};
-
-// const { name, year, job, hobbies: {games, sport}, sayHello } = person; // destructuring
-// console.log(sayHello());
-
-// console.log(person);
-
-// person.sayHello();
-
-// console.log(Object.keys(person).length); // objectning faqat keylarini array qilib beradi
-
-// for in - faqat object uchun
-// for of - faqat array uchun
-
-// for (let key in person) {
-//   console.log(typeof key);
-//   console.log(typeof person[key]);
-//   if (typeof person[key] === 'object') {
-//     for (let i in person[key]) {
-//   console.log(`Property ${i} : Value: ${person[key][i]}`);
-//     }
-//   } else {
-// console.log(`Property ${key} : Value: ${person[key]}`);
-//   }
-// }*/
