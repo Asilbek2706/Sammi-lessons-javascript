@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+}
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #1f1f1f;
+    border-bottom: 4px solid white;
+}
+.car {
+    height: 100px;
+    width: 900px;
+    position: absolute;
+    left: 0;
+}
+.car img {
+    object-fit: cover;
+    width: 200px;
+    height: 150px;
+}
+
+.btn {
+    width: 100px;
+    margin: 0 auto;
+}
+.btn button {
+    width: 100px;
+    height: 50px;
+    background-color: green;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 30px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.btn button:hover {
+    background-color: rgb(1, 161, 1);
+    transition: all 0.3s ease;
+}
+
+.btn button:active {
+    transform: translateY(-10px);
+}
