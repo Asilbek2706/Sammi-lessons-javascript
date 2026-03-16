@@ -1,0 +1,36 @@
+.wrapper,
+.posts {
+    width: 500px;
+    margin: 50px auto;
+}
+
+input,
+button {
+    width: 400px;
+    height: 40px;
+    margin-top: 20px;
+    display: block;
+}
+
+.post {
+    width: 400px;
+    padding: 10px 8px;
+    border: 1px solid #1f1f1f;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.post h4,
+.post p {
+    margin: 0;
+}
+
+.error {
+    width: 400px;
+    background-color: rgb(230, 116, 116);
+    padding: 10px 8px;
+    border-radius: 5px;
+}
